@@ -1,0 +1,95 @@
+/* Global styles */
+body {
+    font-family: Manrope;
+    background-color: hsl(210, 46%, 95%);
+}
+
+h3, h4 {
+    color: hsl(217, 19%, 35%);
+    font-weight: 700;
+}
+
+p {
+    color: hsl(214, 17%, 51%);
+    font-size: 13px;
+}
+
+/* Main card styles */
+.main-card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 25px;
+    max-width: 660px;
+}
+
+/* Main card image styles */
+.main-card-image img {
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+}
+
+/* Main card text styles */
+.main-card-text {
+    background-color: white;
+    border-bottom-left-radius: 2%;
+    border-bottom-right-radius: 2%;
+}
+
+.main-card-text-p {
+    font-weight: 500;
+}
+
+/* Footer  styles*/
+.footer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    justify-content: space-between;
+}
+
+.footer #avatar {
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+}
+
+.footer .footer-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 300px;
+    line-height: 1px;
+}
+
+.footer #share-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(210, 46%, 95%);
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    margin-right: 45px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.footer #share-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    max-width: 60%;
+    max-height: 60%;
+}
+
+
+
