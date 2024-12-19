@@ -84,11 +84,12 @@ p {
     width: 50px;
     height: 50px;
     background-color: hsl(210, 46%, 95%);
-    border-radius: 50%; /* Circular button */
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-right: 45px;
+    cursor: pointer;
 }
 
 .footer #share-button img {
@@ -102,16 +103,20 @@ p {
 
 .social-media {
     width: 660px;
-    height: 70px;
+    height: 80px;
     background-color: hsl(217, 19%, 35%);
-    display: grid;
+    display: none;
     grid-template-columns: 2fr 1fr;
     color: #edf2f8;
     position: relative;
-    bottom: 70px;
+    bottom: 80px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     left: 0;
+}
+
+.social-media.active {
+    display: grid;
 }
 
 .social-media-icons {
@@ -120,7 +125,7 @@ p {
 }
 
 .social-media-icons span {
-    color: #6d7f97;
+    color: #edf2f8;
     letter-spacing: 4px;
 }
 
@@ -144,6 +149,10 @@ p {
 
 /* Media queries */
 @media (min-width: 850px) {
+    .main-card-container {
+        position: absolute;
+    }
+
     .main-card {
         flex-direction: row;
         align-items: stretch;
@@ -210,8 +219,24 @@ p {
     .social-media {
         grid-template-columns: 1fr;
         position: absolute;
-        bottom: 120px;
+        bottom: 200px;
         left: 500px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        width: 230px;
+        height: 50px;
+    }
+
+    .social-media::before {
+        border-top: 15px solid #48556a;
+        border-bottom: 15px solid transparent;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        content: '';
+        position: absolute;
+        width: 0;
+        top: 49px;
+        left: 100px;
     }
 
     .return-button {
