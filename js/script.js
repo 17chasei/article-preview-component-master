@@ -9,3 +9,5 @@ shareButton.addEventListener('click', () => {
 returnButton.addEventListener('click', () => {
     shareMenu.classList.remove('active');
 });
+
+// BRUH
