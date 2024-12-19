@@ -33,6 +33,8 @@ p {
 .main-card-image img {
     border-top-left-radius: 2%;
     border-top-right-radius: 2%;
+    display: block;
+    width: 100%;
 }
 
 /* Main card text styles */
@@ -40,13 +42,19 @@ p {
     background-color: white;
     border-bottom-left-radius: 2%;
     border-bottom-right-radius: 2%;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-card-text h3 {
+    padding: 0 30px;
 }
 
 .main-card-text-p {
     font-weight: 500;
+    padding: 0 30px;
 }
 
-/* Footer  styles*/
+/* Footer styles */
 .footer {
     display: flex;
     align-items: center;
@@ -70,26 +78,96 @@ p {
     line-height: 1px;
 }
 
+/* Share button styles */
 .footer #share-button {
+    width: 50px;
+    height: 50px;
+    background-color: hsl(210, 46%, 95%);
+    border-radius: 50%; /* Circular button */
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: hsl(210, 46%, 95%);
-    border-radius: 100%;
-    width: 50px;
-    height: 50px;
     margin-right: 45px;
-    overflow: hidden;
-    flex-shrink: 0;
 }
 
+/* Image inside the share button */
 .footer #share-button img {
     width: 100%;
     height: 100%;
     object-fit: contain;
     max-width: 60%;
     max-height: 60%;
+    width: 25px;
 }
 
+/* Media queries */
+@media (min-width: 850px) {
+    .main-card {
+        flex-direction: row;
+        align-items: stretch;
+        display: flex;
+        width: 100%;
+    }
 
+    .main-card-image {
+        display: flex;
+        width: 35%;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
 
+    .main-card-image img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 0px;
+    }
+
+    .main-card-text {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 65%;
+        position: relative;
+    }
+
+    #share-button {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background-color: hsl(210, 46%, 95%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        right: 1px;
+        box-sizing: border-box;
+    }
+
+    #share-button img {
+        width: 60%;
+        height: 60%;
+        object-fit: contain;
+    }
+
+    .footer {
+        width: 550px
+    }
+
+    .footer-text {
+        margin-right: 25px;
+        padding-bottom: 7px;
+    }
+}
+
+@media (max-width: 748px) {
+    .footer {
+       width: 605px;
+    }
+}
